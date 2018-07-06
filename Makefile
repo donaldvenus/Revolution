@@ -1,14 +1,17 @@
-all:		game
+all:		revolution
 	    	echo "all done"
 
-game:		game.o 
-	    	gcc game.o -o
+revolution:	main.o game.o
+			g++ main.o game.o -o revolution
+
+main.o:		main.cpp
+			g++ main.cpp -c
 
 game.o:		game.cpp game.h
-	    	gcc game.cpp -c -0
+	    	g++ game.cpp -c
 
 clean:  
-	  		rm -f *.o game
+	  		rm -f *.o revolution
 
 tar:		game.tgz
 	    	echo "tar made"
