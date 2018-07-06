@@ -7,5 +7,7 @@ Game::Game() {
 
 /* Start the game. */
 void Game::start() {
+	Empire empire;
+	Rebels rebels;
 	printf("Game started!\n");
 }

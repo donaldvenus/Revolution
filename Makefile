@@ -1,20 +1,30 @@
-all:		revolution
-	    	echo "all done"
+all:			revolution
+	    		echo "all done"
 
-revolution:	main.o game.o
-			g++ main.o game.o -o revolution
+revolution:		main.o game.o empire.o rebels.o nation.o
+				g++ main.o game.o empire.o rebels.o nation.o -o revolution
 
-main.o:		main.cpp
-			g++ main.cpp -c
+main.o:			main.cpp
+				g++ main.cpp -c
 
-game.o:		game.cpp game.h
-	    	g++ game.cpp -c
+game.o:			game.cpp game.h
+	    		g++ game.cpp -c
+
+empire.o:		empire.cpp empire.h
+				g++ empire.cpp -c
+
+rebels.o:		rebels.cpp rebels.h
+				g++ rebels.cpp -c
+
+nation.o:		nation.cpp nation.h
+				g++ nation.cpp -c
 
 clean:  
-	  		rm -f *.o revolution
+	  			rm -f *.o revolution
 
-tar:		game.tgz
-	    	echo "tar made"
+tar:			revolution.tgz
+	    		echo "tar made"
 
-game.tgz:	Makefile README game.cpp game.h
-			tar -zcvf game.tgz Makefile README game.cpp game.h
+revolution.tgz:	Makefile README game.cpp game.h main.cpp
+				tar -zcvf revolution.tgz Makefile README game.cpp game.h 
+				main.cpp
