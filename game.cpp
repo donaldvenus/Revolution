@@ -9,5 +9,6 @@ Game::Game() {
 void Game::start() {
 	Empire empire;
 	Rebels rebels;
+	Map map(7);
 	printf("Game started!\n");
 }

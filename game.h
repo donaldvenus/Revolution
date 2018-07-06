@@ -4,6 +4,7 @@
 #include <stdio.h>
 #include "empire.h"
 #include "rebels.h"
+#include "map.h"
 
 /* Contains the entire game */
 class Game {
