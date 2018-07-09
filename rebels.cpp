@@ -1,6 +1,5 @@
 #include "rebels.h"
 
-/* Create the empire. */
+/* Create the rebels. */
 Rebels::Rebels() {
-	printf("Rebels created!\n");
 }

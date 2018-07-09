@@ -5,12 +5,14 @@
 #include <vector>
 #include "city.h"
 
+#define MAP_SIZE 7
+
 /* Contains the game map. */
 class Map {
 	std::vector<City> cities;
-	int numCities;
 public:
-	Map(int mapSize);
+	Map();
+	void init();
 	void print();
 };
 
