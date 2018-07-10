@@ -27,6 +27,13 @@ void Map::init() {
 	cities[6].setNumRebels(2000);
 }
 
+/* Update cities with new troop values. */
+void Map::updateCities() {
+	for (int i = 0; i < MAP_SIZE; i++) {
+		cities[i].updateTroops();
+	}
+}
+
 /* Print the map. */
 void Map::print() {
 	for (int i = 0; i < MAP_SIZE; i++) {

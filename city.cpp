@@ -4,6 +4,8 @@
 City::City() {
 	numRebels = 0;
 	numEmpire = 0;
+	newRebels = 0;
+	newEmpire = 0;
 	owner = NEUTRAL;
 }
 
@@ -35,4 +37,22 @@ int City::getOwner() {
 /* Set new city owner. */
 void City::setOwner(int own) {
 	owner = own;
+}
+
+/* Set new Rebel troops for the city. */
+void City::setNewRebels(int num) {
+	newRebels += num;
+}
+	
+/* Set new Imperial troops for the city. */
+void City::setNewEmpire(int num) {
+	newEmpire += num;
+}
+
+/* Update cities with new troop values. */
+void City::updateTroops() {
+	numRebels += newRebels;
+	numEmpire += newEmpire;
+	newRebels = 0;
+	newEmpire = 0;
 }

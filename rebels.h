@@ -4,9 +4,10 @@
 #include "nation.h"
 
 /* Empire. */
-class Rebels : Nation {
+class Rebels : public Nation {
 public:
 	Rebels();
+	bool adjustTroopValues(City& src, City& dest, int num);
 };
 
 #endif

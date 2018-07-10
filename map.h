@@ -9,10 +9,11 @@
 
 /* Contains the game map. */
 class Map {
-	std::vector<City> cities;
 public:
+	std::vector<City> cities;
 	Map();
 	void init();
+	void updateCities();
 	void print();
 };
 
